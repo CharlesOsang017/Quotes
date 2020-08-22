@@ -1,6 +1,6 @@
 export class Quote {
-   showAthor: boolean;
+   showAuthor: boolean;
    constructor(public id: number,public name: string, public author: string){
-       this.showAthor=false;
+       this.showAuthor=false;
    }
 }

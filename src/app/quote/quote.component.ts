@@ -12,6 +12,10 @@ export class QuoteComponent implements OnInit {
     new Quote(1, 'I have to study myself in actuality – as I am, not as I wish to be.', 'KRISHNAMURTI'),
     new Quote(1, 'We are rarely proud when we are alone.', 'Voltaire'),
   ];
+
+  toggleDetails(index){
+    this.quotes[index].showAuthor = !this.quotes[index].showAuthor;
+  }
   constructor() { }
 
   ngOnInit() {
