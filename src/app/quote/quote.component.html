@@ -1,7 +1,7 @@
   <h1>Quotes</h1>
   <ul>
       <div *ngFor='let quote of quotes; let i=index'>
-        <li appHighlight>{{quote.name}}</li>
+        <li appHighlight>{{quote.name}} updated on{{quote.completeDate|date}}</li>
           <button (click)='toggleDetails(i)'>More on quote</button>
           <app-quote-detail *ngIf='quote.showAuthor' [quote]='quote'(isComplete)='completeQuote($event,i)'></app-quote-detail>
       </div>
