@@ -1,9 +1,61 @@
-  <h1>Quotes</h1>
+<div class="container">
+  <h1>Life-touching  Quotes</h1>
+  <p>Start your day with a good quote</p>
+  <hr>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div *ngFor='let quote of quotes; let i = index'>
+        <div>
+          <h4 id={{i}} appHighlight>{{quote.name}} uploaded on {{quote.completeDate|date|uppercase}}</h4>
+          <button (click)='toggleDetails(i)' class="btn btn-primary">More on quote</button>
+        </div>
+
+        <div *ngIf='quote.showAuthor'>
+          <app-quote-detail [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail>        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <p *ngIf='goals.length > 5'>You have too many goals</p> -->
+</div> 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <!-- <div class="container">
+   <h1>Life-touching  Quotes</h1>
+   <p>Start your day with good quote</p>
+   <hr>
+   <div class="row">
+   <div class="col-md-6">
+   <div *ngFor='let quote of quotes; let i = index'>
+ </div>
+ <h4 id={{i}} appHighlight>{{quote.name}} uploaded on {{quote.completeDate|date|uppercase}}</h4>
+ <button (click)='toggleDetails(i)' class="btn btn-primary">View More</button>
+</div>
+ </div *ngIf='quote.showAuthor'>
+ <app-quote-detail [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail>
+</div>
+</div>
+</div> -->
+
+ <!-- <h1>Quotes</h1>
   <ul>
       <div *ngFor='let quote of quotes; let i=index'>
-        <li appHighlight>{{quote.name}} updated on{{quote.completeDate|date}}</li>
+        <li appHighlight>{{quote.name}} updated on {{quote.completeDate|date|uppercase}}</li>
           <button (click)='toggleDetails(i)'>More on quote</button>
-          <app-quote-detail *ngIf='quote.showAuthor' [quote]='quote'(isComplete)='completeQuote($event,i)'></app-quote-detail>
+          <app-quote-detail *ngIf='quote.showAuthor' [quote]='quote'(isComplete)='DeleteQuote($event,i)'></app-quote-detail>
       </div>
     </ul>
-  
+   -->

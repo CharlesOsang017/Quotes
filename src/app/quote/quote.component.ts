@@ -7,22 +7,24 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
-    new Quote(1, 'If I have seen further it is by standing on the shoulders of giants', 'Sir Isaac Newton', new Date(2017,9,23)),
-    new Quote(2, 'The roots of education … are bitter, but the fruit is sweet', 'Aristotle', new Date(2018,10,30)),
-    new Quote(1, 'I have to study myself in actuality – as I am, not as I wish to be.', 'KRISHNAMURTI', new Date (2019,3,18)),
-    new Quote(1, 'We are rarely proud when we are alone.', 'Voltaire', new Date(2018, 7,24)),
+    new Quote(1, 'If I have seen further it is by standing on the shoulders of giants', 'Sir Isaac Newton', new Date(2017, 9, 23)),
+    new Quote(2, 'The roots of education … are bitter, but the fruit is sweet', 'Aristotle', new Date(2018, 10, 30)),
+    new Quote(1, 'I have to study myself in actuality – as I am, not as I wish to be.', 'KRISHNAMURTI', new Date(2019, 3, 18)),
+    new Quote(1, 'We are rarely proud when we are alone.', 'Voltaire', new Date(2018, 7, 24)),
   ];
- 
-  toggleDetails(index){
+
+  toggleDetails(index) {
     this.quotes[index].showAuthor = !this.quotes[index].showAuthor;
   }
 
-  copmleteQuote(isComplete, index){
-    if(isComplete) {
-      this.quotes.splice(index,1);
+  deleteQuote(isComplete, index) {
+    if (isComplete) {
+      let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
+      if (toDelete) {
+        this.quotes.splice(index, 1)
+      }
     }
   }
-
 
   constructor() { }
 
