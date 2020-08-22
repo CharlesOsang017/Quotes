@@ -5,72 +5,17 @@ import { Quote } from '../quote';
   templateUrl: './quote-detail.component.html',
   styleUrls: ['./quote-detail.component.css']
 })
+export class QuoteDetailComponent implements OnInit {
 
-export class DetailsComponent implements OnInit {
-  @Input() quote:Quote
+  @Input() quote: Quote;
+  @Output() isComplete =new EventEmitter<boolean>();
 
-  upvotes=0;
-  downvotes=0;
-
-
+  quoteDelete(complete: boolean){
+    this.isComplete.emit(complete);
+  }
   constructor() { }
 
   ngOnInit() {
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// export class QuoteDetailComponent implements OnInit {
-
-//   @Input() quote: Quote;
-//   @Output() isComplete =new EventEmitter<boolean>();
-
-//   quoteDelete(complete: boolean){
-//     this.isComplete.emit(complete);
-//   }
-
-//   constructor() { }
-
-//   ngOnInit() {
-//   }
-
-// }

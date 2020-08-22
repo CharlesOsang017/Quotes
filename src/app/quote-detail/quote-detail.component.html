@@ -1,75 +1,22 @@
- 
-  <div class="card-body ">
-
-    <p>
-      Author:{{quote.author}}
-    </p>
-    <p>
-      Publisher:{{quote.name}}
-    </p>
-    <p>
-      Upvotes:{{quote.upvotes}}
-    </p>
-    <p>
-      Downvotes:{{quote.downvotes}}
-    </p>
-    <p>
-       Date {{quote.completeDate|date}}
-      </p>
-
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <h5> {{quote.name}}</h5>
+<h5> {{quote.name}}</h5>
 
 
 
 <p>
-   Author: {{quote.author}}
+  Author: {{quote.author}}
 </p>
-<app-details [quote]="quote"></app-details>
+<!-- <app-details [quote]="quote"></app-details>
 <button class="btn btn-info" (click)="upvote(i)">Upvote </button>
-<button class="btn btn-info" (click)="downvote(i)">Downvote </button>
+<button class="btn btn-info" (click)="downvote(i)">Downvote </button> -->
 uploaded on {{quote.completeDate|date|uppercase}}<br>
 <button (click)='quoteDelete(true)' class="btn d-inline btn-outline-secondary">Delete Quote</button><br><br>
-<button (click)='quoteDelete(true)' class="btn btn-outline-success">Upvote</button><br><br>
-<button (click)='quoteDelete(true)' class="btn btn-outline-danger">Downvote</button><br>
+<button (click)='quoteDelete(true)' class="btn btn-outline-success"><i class="fa fa-thumbs-o-up" aria-hidden="true">Upvote</i></button><br><br>
+<button (click)='quoteDelete(true)' class="btn btn-outline-danger"><i class="fa fa-thumbs-o-down" aria-hidden="true">Downvote</i> </button><br>
 
 
 
 
-
+<!-- 
   quote
 Whatever our souls are made of, his and mine are the same. - Emily Brontë
 Love is composed of a single soul inhabiting two bodies. - Aristotle
