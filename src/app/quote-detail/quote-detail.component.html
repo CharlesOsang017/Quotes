@@ -5,13 +5,16 @@
 <p>
   Author: {{quote.author}}
 </p>
-<!-- <app-details [quote]="quote"></app-details>
-<button class="btn btn-info" (click)="upvote(i)">Upvote </button>
-<button class="btn btn-info" (click)="downvote(i)">Downvote </button> -->
-uploaded on {{quote.completeDate|date|uppercase}}<br>
+<p>Downvote: {{numberOfDownVotes}}</p>
+<p>Upvote: {{numberOfUpVotes}}</p>
+<button (click)="downvoteButtonClick()"class="bg-info">Downvote</button>
+<button (click)="upvoteButtonClick()">Upvote</button>
+
 <button (click)='quoteDelete(true)' class="btn d-inline btn-outline-secondary">Delete Quote</button><br><br>
-<button (click)='quoteDelete(true)' class="btn btn-outline-success"><i class="fa fa-thumbs-o-up" aria-hidden="true">Upvote</i></button><br><br>
-<button (click)='quoteDelete(true)' class="btn btn-outline-danger"><i class="fa fa-thumbs-o-down" aria-hidden="true">Downvote</i> </button><br>
+<!-- <button (click)='likeQuo()' id="display" class="btn btn-outline-success">Upvote <i class="fa fa-thumbs-up"
+  style="font-size:36px"></i></button><span id="lk"> 0</span>
+  <button id="dislike" class="btn btn-outline-success">Dislike <i class="fa fa-thumbs-down"
+    style="font-size:36px"></i></button><span id="dlk"> 0</span> -->
 
 
 
