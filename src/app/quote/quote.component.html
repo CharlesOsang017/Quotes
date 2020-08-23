@@ -11,23 +11,19 @@
           <button (click)='toggleDetails(i)' class="btn btn-info">More on quote</button>
         </div>
 
-        <div *ngIf='quote.showAuthor'>
+        <div *ngIf='quote.showDescription'>
           <app-quote-detail [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail>
         </div>
       </div>
     </div>
   </div>
 <div class="col-md-6">
-  <app-quote-form (addQuotes)="addNewQuote($event)"></app-quote-form>
+  <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
 </div>
 </div>
 
 
-<!-- <app-details [quote]="quote"></app-details>
-<button class="btn btn-info" (click)="upvote(i)">Upvote </button>
-<button class="btn btn-info" (click)="downvote(i)">Downvote </button>
-  -->
- 
+
  
  
  

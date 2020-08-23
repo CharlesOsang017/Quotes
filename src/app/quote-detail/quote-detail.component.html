@@ -1,22 +1,14 @@
 <h5> {{quote.name}}</h5>
-
-
-
 <p>
-  Author: {{quote.author}}
+  Author: {{quote.description}}
 </p>
+
+
 <p>Downvote: {{numberOfDownVotes}}</p>
 <p>Upvote: {{numberOfUpVotes}}</p>
-<button (click)="downvoteButtonClick()"class="bg-info">Downvote</button>
-<button (click)="upvoteButtonClick()">Upvote</button>
-
-<button (click)='quoteDelete(true)' class="btn d-inline btn-outline-secondary">Delete Quote</button><br><br>
-<!-- <button (click)='likeQuo()' id="display" class="btn btn-outline-success">Upvote <i class="fa fa-thumbs-up"
-  style="font-size:36px"></i></button><span id="lk"> 0</span>
-  <button id="dislike" class="btn btn-outline-success">Dislike <i class="fa fa-thumbs-down"
-    style="font-size:36px"></i></button><span id="dlk"> 0</span> -->
-
-
+<button (click)="downvoteButtonClick()" class="btn d-inline btn-outline-danger">Downvote</button>
+<button (click)="upvoteButtonClick()" class="btn d-inline btn-outline-success">Upvote</button>
+<button (click)='quoteDelete(true)' class="btn d-inline btn-outline-secondary">Delete Quote</button>
 
 
 <!-- 
