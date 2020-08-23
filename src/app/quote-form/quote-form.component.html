@@ -2,35 +2,28 @@
   <h2 class="text-center">Create a new Quote</h2>
   <hr>
   <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
-      
+
     <div class="form-group">
 
-      <label for="name">Author</label>
-      <input type="text" required class="form-control" id="name"  [(ngModel)]="newQuote.name" style="background-color: transparent; color: white;" name="name">
-  </div>
+      <label for="Author">Author</label>
+      <input type="text" required class="form-control" id="Author" [(ngModel)]="newQuote.Author"
+        style="background-color: transparent; color: white;" name="Author">
+    </div>
 
-
-      <!-- <div class="form-group">
-
-        <label for="name">Quote Type</label>
-        <input type="text" required class="form-control" id="type" [(ngModel)]="newQuote.quoteType" style="background-color: transparent; color: white;" name="name">
-
-      </div> -->  
-
-     
     <div class="form-group">
 
-      <label for="description">Quote</label>
-      <textarea class="form-control" id="description"  [(ngModel)]="newQuote.description" style="background-color: transparent; color: white;" rows="4" required></textarea>
+      <label for="name">Quote</label>
+      <textarea class="form-control" id="name" [(ngModel)]="newQuote.name"
+        style="background-color: transparent; color: white;" rows="4" name="name" required></textarea>
 
-  </div>
+    </div>
 
-      <div class="form-group">
-          <label for="complete"> Completion </label><br>
-          <input type='date'style="background-color: green; color: white;" id="complete" required>
+    <div class="form-group">
+      <label for="complete"> Completion </label><br>
+      <input type='date' style="background-color: green; color: white;" id="complete" required>
 
-      </div>
-      <button type="submit" class="btn btn-light">Add Quote</button>
+    </div>
+    <button type="submit" class="btn btn-light">Add Quote</button>
   </form>
 </div>
 

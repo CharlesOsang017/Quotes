@@ -1,30 +1,12 @@
+<!-- <h5> {{quote.name}}</h5> -->
 
-<h5> {{quote.name}}</h5>
+<p>Author: {{quote.Author}}</p>
 
-<!-- <p>Date: {{quote.new date}}</p> -->
-<p>Author: {{quote.description}}</p>
 <p>Uploaded on : {{quote.completeDate|date|uppercase}}</p>
 <p>Downvote: {{numberOfDownVotes}}</p>
 <p>Upvote: {{numberOfUpVotes}}</p>
 
-<button (click)="downvoteButtonClick()" class="btn d-inline btn-outline-danger"><i class="fa fa-thumbs-down"></i></button>
+<button (click)="downvoteButtonClick()" class="btn d-inline btn-outline-danger"><i
+    class="fa fa-thumbs-down"></i></button>
 <button (click)="upvoteButtonClick()" class="btn d-inline btn-outline-success"><i class="fa fa-thumbs-up"></i></button>
 <button (click)='quoteDelete(true)' class="btn d-inline btn-outline-secondary"><i class="fa fa-trash"></i></button>
-
-
-<!-- 
-  quote
-Whatever our souls are made of, his and mine are the same. - Emily Brontë
-Love is composed of a single soul inhabiting two bodies. - Aristotle
-
- Funny Quote
-Vote for the man who promises least; he will be the least disappointing.
-Bernard Baruch
-
- Nature Quote
-Trees love to toss and sway; they make such happy noises.
-Emily Carr
-
-Art Quote
-Religion and art spring from the same root and are close kin. Economics and art are strangers.
-Nathaniel Hawthorne   -->
