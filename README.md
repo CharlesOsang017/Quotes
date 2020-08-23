@@ -11,7 +11,7 @@ Quotes is an app that displays inspirational quotes and it has also a section th
 
 ## GitHub live link
 
-
+https://charlesosang017.github.io/Quotes/
 
 ## License
 MIT
