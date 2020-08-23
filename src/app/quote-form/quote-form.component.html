@@ -1,28 +1,36 @@
-<div class="container-fluid float-left">
+<div class="container-fluid ">
   <h2 class="text-center">Create a new Quote</h2>
   <hr>
   <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+      
+    <div class="form-group">
+
+      <label for="name">Author</label>
+      <input type="text" required class="form-control" id="name"  [(ngModel)]="newQuote.name" style="background-color: transparent; color: white;" name="name">
+  </div>
+
+
+      <!-- <div class="form-group">
+
+        <label for="name">Quote Type</label>
+        <input type="text" required class="form-control" id="type" [(ngModel)]="newQuote.quoteType" style="background-color: transparent; color: white;" name="name">
+
+      </div> -->  
+
+     
+    <div class="form-group">
+
+      <label for="description">Quote</label>
+      <textarea class="form-control" id="description"  [(ngModel)]="newQuote.description" style="background-color: transparent; color: white;" rows="4" required></textarea>
+
+  </div>
+
       <div class="form-group">
-
-          <label for="name">Quote</label>
-          <input type="text" required class="form-control" id="name" [(ngModel)]="newQuote.name" style="background-color: transparent; color: white;" name="name">
-
-<!-- Testing to see if we get any data -->
-          <!-- Display {{newQuote.name}} -->
-      </div>
-      <div class="form-group">
-
-          <label for="description">Author</label>
-          <textarea class="form-control" id="description" style="background-color: transparent; color: white;" rows="4" required></textarea>
-
-      </div>
-      <div class="form-group">
-        Author: {{quote.description}}
-          <label for="complete">Completion</label>
+          <label for="complete"> Completion </label><br>
           <input type='date'style="background-color: green; color: white;" id="complete" required>
 
       </div>
-      <button type="submit" class="btn btn-light">Add Goal</button>
+      <button type="submit" class="btn btn-light">Add Quote</button>
   </form>
 </div>
 

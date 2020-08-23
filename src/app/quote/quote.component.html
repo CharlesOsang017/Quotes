@@ -1,5 +1,6 @@
 <div class="container">
-  <h1>Life-touching  Quotes</h1>
+  <h1><strong>Life-touching  Quotes</strong>
+  </h1>
   <p>Start your day with a good quote </p>
   <hr>
 
@@ -7,7 +8,7 @@
     <div class="col-md-6">
       <div *ngFor='let quote of quotes; let i = index'>
         <div>
-          <h5 id={{i}} appHighlight>{{quote.name}}</h5>
+          <h5 id={{i}} appHighlight><p>{{quote.name}}</p></h5>
           <button (click)='toggleDetails(i)' class="btn btn-info">More on quote</button>
         </div>
 
