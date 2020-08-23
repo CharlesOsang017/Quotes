@@ -2,14 +2,13 @@
 <p>
   Author: {{quote.description}}
 </p>
-
-
+<!-- <p>Date: {{quote.new date}}</p> -->
+<p>Uploaded on : {{quote.completeDate|date|uppercase}}</p>
 <p>Downvote: {{numberOfDownVotes}}</p>
 <p>Upvote: {{numberOfUpVotes}}</p>
 <button (click)="downvoteButtonClick()" class="btn d-inline btn-outline-danger">Downvote</button>
 <button (click)="upvoteButtonClick()" class="btn d-inline btn-outline-success">Upvote</button>
 <button (click)='quoteDelete(true)' class="btn d-inline btn-outline-secondary">Delete Quote</button>
-
 
 <!-- 
   quote

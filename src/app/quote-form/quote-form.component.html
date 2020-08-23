@@ -1,28 +1,28 @@
-<div class="container-fluid">
+<div class="container-fluid float-left">
   <h2 class="text-center">Create a new Quote</h2>
   <hr>
   <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
       <div class="form-group">
 
-          <label for="name">Aouthor</label>
-          <input type="text" required class="form-control" id="name" [(ngModel)]="newQuote.name" name="name">
+          <label for="name">Quote</label>
+          <input type="text" required class="form-control" id="name" [(ngModel)]="newQuote.name" style="background-color: transparent; color: white;" name="name">
 
 <!-- Testing to see if we get any data -->
-          Display {{newQuote.name}}
+          <!-- Display {{newQuote.name}} -->
       </div>
       <div class="form-group">
 
-          <label for="description">Description</label>
-          <textarea class="form-control" id="description" rows="4" required></textarea>
+          <label for="description">Author</label>
+          <textarea class="form-control" id="description" style="background-color: transparent; color: white;" rows="4" required></textarea>
 
       </div>
       <div class="form-group">
-
+        Author: {{quote.description}}
           <label for="complete">Completion</label>
-          <input type='date' id="complete" required>
+          <input type='date'style="background-color: green; color: white;" id="complete" required>
 
       </div>
-      <button type="submit" class="btn btn-success">Add Goal</button>
+      <button type="submit" class="btn btn-light">Add Goal</button>
   </form>
 </div>
 
