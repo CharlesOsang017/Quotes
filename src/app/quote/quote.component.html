@@ -1,7 +1,7 @@
-<div class="container">
-  <h1><strong>Life-touching  Quotes</strong>
+<div class="container align-items-center">
+  <h1 class="text-center"><strong>Life-touching  Quotes</strong>
   </h1>
-  <p>Start your day with a good quote </p>
+  <p class="text-center">Start your day with a good quote </p>
   <hr>
 
   <div class="row">
@@ -10,7 +10,7 @@
         <div>
           <h5 id={{i}} appHighlight><p> {{quote.name}} </p></h5>
           <button (click)='toggleDetails(i)' class="btn btn-info">More on quote</button>
-        </div>
+        </div><br><br>
 
         <div *ngIf='quote.showDescription'>
           <app-quote-detail [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail>
