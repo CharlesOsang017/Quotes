@@ -13,9 +13,9 @@ export class QuoteComponent implements OnInit {
     new Quote(1, 'We are rarely proud when we are alone.', 'Voltaire', new Date(2018, 7, 24)),
   ];
 
-  addNewQuote(quote){
+  addNewQuote(quote) {
     let quoteLength = this.quotes.length;
-    quote.id = quoteLength+1;
+    quote.id = quoteLength + 1;
     quote.completeDate = new Date(quote.completeDate)
     this.quotes.push(quote)
   }
@@ -33,7 +33,7 @@ export class QuoteComponent implements OnInit {
       }
     }
   }
-  
+
 
   constructor() { }
 

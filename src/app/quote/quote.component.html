@@ -1,5 +1,5 @@
 <div class="container align-items-center">
-  <h1 class="text-center"><strong>Life-touching  Quotes</strong>
+  <h1 class="text-center"><strong>Life-touching Quotes</strong>
   </h1>
   <p class="text-center">Start your day with a good quote </p>
   <hr>
@@ -8,7 +8,9 @@
     <div class="col-md-6">
       <div *ngFor='let quote of quotes; let i = index'>
         <div>
-          <h5 id={{i}} appHighlight><p> {{quote.name}} </p></h5>
+          <h5 id={{i}} appHighlight>
+            <p> {{quote.name}} </p>
+          </h5>
           <button (click)='toggleDetails(i)' class="btn btn-info">More on quote</button>
         </div><br><br>
 
@@ -18,26 +20,26 @@
       </div>
     </div>
   </div>
-<div class="col-md-6">
-  <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+  <div class="col-md-6">
+    <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+  </div>
 </div>
-</div>
 
 
 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- <!-- <div class="container">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container">
    <h1>Life-touching  Quotes</h1>
    <p>Start your day with good quote</p>
    <hr>
@@ -54,7 +56,7 @@
 </div>
 </div> -->
 
- <!-- <h1>Quotes</h1>
+<!-- <h1>Quotes</h1>
   <ul>
       <div *ngFor='let quote of quotes; let i=index'>
         <li appHighlight>{{quote.name}} updated on {{quote.completeDate|date|uppercase}}</li>
