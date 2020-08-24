@@ -7,10 +7,10 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
-    new Quote(1, 'If I have seen further it is by standing on the shoulders of giants', 'Sir Isaac Newton', new Date(2017, 9, 23)),
-    new Quote(2, 'The roots of education … are bitter, but the fruit is sweet', 'Aristotle', new Date(2018, 10, 30)),
-    new Quote(1, 'I have to study myself in actuality – as I am, not as I wish to be.', 'KRISHNAMURTI', new Date(2019, 3, 18)),
-    new Quote(1, 'We are rarely proud when we are alone.', 'Voltaire', new Date(2018, 7, 24)),
+    new Quote(1, 'Love is when you meet someone who tells you something new about yourself.', 'Andre Breton', new Date(2017, 9, 23), 'Love Quote'),
+    new Quote(2, "If two wrongs don't make a right, try three", 'Laurence J. Peter', new Date(2018, 10, 30), 'funny Quote'),
+    new Quote(1, 'Nature will bear the closest inspection. She invites us to lay our eye level with her smallest leaf, and take an insect view of its plain', "Henry David Thoreau", new Date(2019, 3, 18), 'Nature Quote'),
+    new Quote(1, 'No great artist ever sees things as they really are. If he did, he would cease to be an artist.', 'Oscar Wilde', new Date(2018, 7, 24), 'Art Quote'),
   ];
 
   addNewQuote(quote) {
@@ -27,7 +27,7 @@ export class QuoteComponent implements OnInit {
 
   deleteQuote(isComplete, index) {
     if (isComplete) {
-      let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
+      let toDelete = confirm(`Are you sure you want to delete quote: ${this.quotes[index].name}?`)
       if (toDelete) {
         this.quotes.splice(index, 1)
       }

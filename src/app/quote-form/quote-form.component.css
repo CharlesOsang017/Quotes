@@ -1,9 +1,7 @@
-.container-fluid{
-    position: relative;
-    left: 111%;
-    /* bottom: 55vh; */
-    /* width: 100%; */
+.container-fluid {
+  position: relative;
+  left: 111%;
 }
-h2{
-    font-family: 'Roboto Condensed', sans-serif;
+h2 {
+  font-family: "Roboto Condensed", sans-serif;
 }

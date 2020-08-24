@@ -1,9 +1,9 @@
+<p><i class="fas fa-quote-left"> </i>{{quote.name}}<i class="fas fa-quote-right"></i></p>
 <p>Author: {{quote.Author}}</p>
 <p>Posted on : {{quote.completeDate|date|uppercase}}</p>
 <p>Downvote: {{numberOfDownVotes}}</p>
 <p>Upvote: {{numberOfUpVotes}}</p>
-
 <button (click)="downvoteButtonClick()" class="btn d-inline btn-outline-danger"><i
-        class="fa fa-thumbs-down"></i></button>
+                class="fa fa-thumbs-down"></i></button>
 <button (click)="upvoteButtonClick()" class="btn d-inline btn-outline-success"><i class="fa fa-thumbs-up"></i></button>
-<button (click)='quoteDelete(true)' class="btn d-inline btn-outline-secondary"><i class="fa fa-trash"></i></button>
+<button (click)='quoteDelete(true)' class="btn d-inline btn-outline-primary"><i class="fa fa-trash"></i></button>
