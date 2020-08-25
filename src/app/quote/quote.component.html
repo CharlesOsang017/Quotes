@@ -1,34 +1,38 @@
 <div class="container align-items-center">
-   <h1 class="text-center"><strong>Life-touching Quotes</strong>
-    <img src="/assets/quotes.jpg" height="130" width="170">
+  <h1 class="text-center">
+    <strong>Life-touching Quotes</strong>
+    <img src="/assets/quotes.jpg" height="130" width="170" />
   </h1>
-  <p class="text-center">Start your day with a good quote </p>
-  <hr>
+  <p class="text-center">Start your day with a good quote</p>
+  <hr />
 
   <div class="row">
-    <div class="col-md-11">
-      <div *ngFor='let quote of quotes; let i = index'>
+    <div class="col-md-6">
+      <div *ngFor="let quote of quotes; let i = index">
         <div>
-          <h5 id={{i}} appHighlight>
-            <p>{{quote.identity}}</p>
+          <h5 id="{{ i }}" appHighlight>
+            <p>{{ quote.identity }}</p>
           </h5>
-          <button (click)='toggleDetails(i)' class="btn btn-info">View Quote</button>
-        </div><br><br>
+          <button (click)="toggleDetails(i)" class="btn btn-info">
+            View Quote
+          </button>
+        </div>
+        <br /><br />
 
-        <div *ngIf='quote.showDescription'>
-          <app-quote-detail [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail>
+        <div *ngIf="quote.showDescription">
+          <app-quote-detail [quote]="quote" (isComplete)="deleteQuote($event, i)"></app-quote-detail>
         </div>
       </div>
     </div>
+    <div class="col-md-6">
+      <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+    </div>
+    <p>Follow us: @Life-touchingquotes@gmail.com</p>
+    <div class="footer">
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-skype"></i>
+      <i class="fab fa-youtube"></i>
+      <i class="fab fa-twitter-square"></i>
+    </div>
   </div>
-  <div class="col-md-6">
-    <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
-  </div>
-  <p>Follow us: @Life-touchingquotes@gmail.com</p>
-  <div class="footer">
-    <i class="fab fa-facebook"></i>
-    <i class="fab fa-skype"></i>
-    <i class="fab fa-youtube"></i>
-    <i class="fab fa-twitter-square"></i>
-
-  </div>
+</div>
